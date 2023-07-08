@@ -16,20 +16,20 @@ namespace GenPOTW
         
         
         
-        public Player(string name, int receptions, int passingTouchdowns, int recievingTouchdowns,
-            int rushingTouchdowns, int interceptionsThrown, int interceptionsCaught, int sacks, int safetiesConverted,
-            int tackles)
+        public Player(string name, string receptions, string passingTouchdowns, string recievingTouchdowns,
+            string rushingTouchdowns, string interceptionsThrown, string interceptionsCaught, string sacks, string safetiesConverted,
+            string tackles)
         {
             _name = name ?? throw new ArgumentNullException(nameof(name));
-            _receptions = receptions;
-            _passing_touchdowns = passingTouchdowns;
-            _recieving_touchdowns = recievingTouchdowns;
-            _rushing_touchdowns = rushingTouchdowns;
-            _interceptions_thrown = interceptionsThrown;
-            _interceptions_caught = interceptionsCaught;
-            _sacks = sacks;
-            _safeties_converted = safetiesConverted;
-            _tackles = tackles;
+            _receptions = int.Parse(receptions);
+            _passing_touchdowns = int.Parse(passingTouchdowns);
+            _recieving_touchdowns = int.Parse(recievingTouchdowns);
+            _rushing_touchdowns = int.Parse(rushingTouchdowns);
+            _interceptions_thrown = int.Parse(interceptionsThrown);
+            _interceptions_caught = int.Parse(interceptionsCaught);
+            _sacks = int.Parse(sacks);
+            _safeties_converted = int.Parse(safetiesConverted);
+            _tackles = int.Parse(tackles);
         }
 
         private string _name;
